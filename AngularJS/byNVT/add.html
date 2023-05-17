@@ -18,26 +18,34 @@
             <button ng-click="add.showUser()" id="btn1">User List</button>
             <div class="forForm">
                 <form>
+                    <div class="user-box">
                     <!--Input name-->
                     <label>Name:</label>
                     <br>
                     <input class="inp" type="text" name="name" placeholder="Enter Name" ng-model="add.new.name" required>
                     <br>
+                    </div>
                     <!--Input email-->
+                    <div class="user-box">
                     <label>Email:</label>
                     <br>
                     <input class="inp" type="email" name="email" placeholder="Enter Email" ng-model="add.new.email" required>
                     <br>
+                    </div>
                     <!--Input password-->
+                    <div class="user-box">
                     <label>Password:</label>
                     <br>
                     <input class="inp" type="password" name="password" placeholder="Enter Password" ng-model="add.new.password" required>
                     <br>
+                    </div>
                     <!--Input phone-->
+                    <div class="user-box">
                     <label>Phone:</label>
                     <br>
                     <input class="inp" type="tel" name="phone" placeholder="Enter Phone" ng-model="add.new.phone" required>
                     <br>
+                    </div>
                     <!--Submit button-->
                     <input id="btn2" type="button" value="Submit" ng-click="add.addInfo()">
                 </form>
