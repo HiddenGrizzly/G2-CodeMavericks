@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+html {
+    height: 100%;
+}
+body {
+    background-image:url("/AngularJS/byNVT/image/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    background-color: #ccc;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn1 {
+    border: none;
+    background-color: #ccc;
+    margin: 4px;
+    text-decoration: underline;
+    color: blue;
+}
+.inp {
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2px;
+    margin: 5px;
+}
+#btn2 {
+    border: 1px solid aquamarine;
+    background-color: aquamarine;
+    border-radius: 4px;
+}
+#tbl,
+#tbl thead,
+#tbl tbody,
+#tbl thead th,
+#tbl tbody tr td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+#tbl {
+    width: 100%;
+}
