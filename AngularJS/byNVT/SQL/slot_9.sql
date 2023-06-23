@@ -41,4 +41,74 @@ select * from nguoi_chiu_trach_nhiem order by ten_nguoi_chiu_trach_nhiem asc;
 select * from san_pham where ma_loai_sp like 'Z37E';
 --5d: Các sản phẩm Nguyễn Văn An Chịu trách nhiệm theo thứ tự giảm dần của mã
 select * from san_pham s join nguoi_chiu_trach_nhiem n on s.ma_nguoi_chiu_trach_nhiem = n.ma_nguoi_chiu_trach_nhiem where n.ten_nguoi_chiu_trach_nhiem like N'Nguyễn Văn An' order by ma_san_pham desc;
+--6a: Số sản phẩm của từng loại sản phẩm
+select ten_loai_sp, COUNT(ma_san_pham) so_luong from loai_san_pham l join san_pham s on s.ma_loai_sp = l.ma_loai_sp group by ten_loai_sp;
+--6b: Số loại sản phẩm trung bình theo loại sản phầm
+SELECT AVG(count) as avg_count
+FROM (
+    SELECT ma_loai_sp, COUNT(ma_san_pham) as count
+    FROM san_pham
+    GROUP BY ma_loai_sp
+) subquery;
+--6c: Hiển thị toàn bộ thông tin về sản phẩm và loại sản phẩm
+select * from san_pham as s join loai_san_pham as l on l.ma_loai_sp = s.ma_loai_sp;
+--6d: Hiển thị toàn bộ thông tin về người chịu trách nhiệm, sản phẩm và loại sản phẩm
+select * from san_pham as s 
+join loai_san_pham as l on l.ma_loai_sp = s.ma_loai_sp 
+join nguoi_chiu_trach_nhiem n on n.ma_nguoi_chiu_trach_nhiem = s.ma_nguoi_chiu_trach_nhiem;
+--7a: Thay đổi trường ngày sản xuất là trước hoặc bằng ngày hiện tại
+update san_pham 
+set ngay_san_xuat = GETDATE()
+where ngay_san_xuat > GETDATE();
+alter table san_pham add constraint ngay check (ngay_san_xuat <= getdate());
+--7b: Đã xác định trường khóa chính và khóa ngoại
+--7c: Thêm trường phiên bản của sản phẩm
+alter table san_pham add phien_ban nvarchar(30); 
+--8a: Đặt index cho cột tên người chịu trách nhiệm
+create index in_nguoi_chiu_trach_nhiem on nguoi_chiu_trach_nhiem(ten_nguoi_chiu_trach_nhiem);
+--8b: Tạo các view
+--View_SanPham
+create view View_SanPham as
+select ma_san_pham, ngay_san_xuat, ten_loai_sp
+from san_pham s join loai_san_pham l on s.ma_loai_sp = l.ma_loai_sp;
+--View_SanPham_NCTN 
+create view View_SanPham_NCTN as 
+select ma_san_pham, ngay_san_xuat, ten_nguoi_chiu_trach_nhiem
+from san_pham s join nguoi_chiu_trach_nhiem n on s.ma_nguoi_chiu_trach_nhiem = n.ma_nguoi_chiu_trach_nhiem;
+--View_Top_SanPham
+create view View_Top_SanPham as
+select top 5 ma_san_pham,ten_loai_sp,ngay_san_xuat 
+from san_pham s join loai_san_pham l on s.ma_loai_sp = l.ma_loai_sp order by ngay_san_xuat desc; 
+--8c: Store Procedure
+--SP_Them_Loai_SP
+create proc SP_Them_Loai_SP @ma char(4), @ten nvarchar (255)
+as
+begin
+	insert into loai_san_pham values (@ma, @ten)
+end
+--SP_Them_NCTN
+create proc SP_Them_NCTN @maNCTN int, @tenNCTN nvarchar(255)
+as
+begin
+	insert into nguoi_chiu_trach_nhiem values (@maNCTN, @tenNCTN)
+end
+--SP_Them_SanPham
+CREATE PROCEDURE SP_Them_SanPham @ma_san_pham char(9), @ngay_san_xuat date, @ma_loai_sp char(4), @ma_nguoi_chiu_trach_nhiem int
+AS
+BEGIN
+    INSERT INTO san_pham (ma_san_pham, ngay_san_xuat, ma_loai_sp, ma_nguoi_chiu_trach_nhiem)
+    VALUES (@ma_san_pham, @ngay_san_xuat, @ma_loai_sp, @ma_nguoi_chiu_trach_nhiem);
+END;
+--SP_Xoa_SanPham
+create procedure SP_Xoa_SanPham @ma_SP char(9)
+as
+begin
+	delete from san_pham where ma_san_pham = @ma_SP;
+end;
+--SP_Xoa_SanPham_TheoLoai
+create proc SP_Xoa_SanPham_TheoLoai @ma_loai char(4)
+as
+begin
+	delete from san_pham where ma_loai_sp = @ma_loai;
+end;
 
