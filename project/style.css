@@ -5,11 +5,13 @@
 }
 body
 {
-    background-color: whitesmoke;
+    position: initial;
+    background-color: rgb(179, 149, 2);
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
     font-family: sans-serif;
+    z-index: 2;
 }
 .menu-bar
 {
@@ -19,12 +21,13 @@ body
     box-sizing: border-box;
     font-family: sans-serif;
     text-align: center;
+    z-index: 200% ;
 }
 .menu-bar ul   
 {
     display: inline-flex;
     list-style: none;
-    color: #fff;
+    color: #cc7171;
 }
 .menu-bar ul li
 {
@@ -34,12 +37,15 @@ body
 }
 .menu-bar ul li a
 {
+    position: relative;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
+    backdrop-filter: blur(5px);
+    z-index: 40;
 }
 .active, .menu-bar ul li:hover
 {
-    background: #234423;
+    background: initial ;
     border-radius: 3px;
 }
 .sub-menu-1
@@ -50,9 +56,10 @@ body
 {
     display: block;
     position: absolute;
-    background: #234423;
+    background: #f1f1f1 inherit;
     margin-top: 15px;
     margin-left: -15px;
+    z-index: 50;
 }
 .menu-bar ul li:hover .sub-menu-1 ul
 {
@@ -74,7 +81,7 @@ body
 }
 .menu-bar ul li:hover .sub-menu-1 ul li a:hover
 {
-    color: #33a533;
+    color: #f2f2f2;
 }
 #img-deg-1
 {
@@ -83,10 +90,13 @@ body
 }
 .img-pos-1
 {
-    position: absolute;
-    width: 70%;
-    top: 15%;
-    left: 25%;
+    
+    position: relative;
+    width:64%;
+    top:14%;
+    left: 32%;
+    z-index: 10;
+    
 }
 .img-deg-2
 {
@@ -96,8 +106,10 @@ body
 .img-pos-2
 {
     position: absolute;
-    top: 60%;
+    width:488px;
+    top: 56%;
     left: 60%;
+    z-index: 10
 }
 .img-deg-3
 {
@@ -106,6 +118,9 @@ float: left;
 .img-pos-3
 {
     position: absolute;
-    top: 60%;
-    left: 2%;
+    width:-30% ; 
+    top: 56%;
+    left: 4%; 
+    z-index: 10
+    
 }
