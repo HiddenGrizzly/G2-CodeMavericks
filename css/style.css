@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    width: 100%;
+}
+
+.menu-bar {
+    display: inline-flex;
+    justify-content: center;
+    background: #444;
+    width: 100%;
+    height: 80px;
+    font-size: 35px;
+}
+
+#web-logo {
+    width: 70px;
+    height: 70px;
+    margin: -10px auto;
+    border-radius: 50%;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-bar ul li {
+    position: relative;
+    padding: 15px 15px;
+    height: 50px;
+    text-align: center;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 100;
+    width: 100%;
+}
+
+.sub-menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.sub-menu ul li {
+    padding: 5px 10px;
+    text-align: left;
+    background-color: #3333337d;
+    border-radius: 10%;
+}
+
+.menu-bar ul li:hover .sub-menu {
+    display: block;
+}
+
+.greeting {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background: whitesmoke;
+}
+
+#greet-1, #greet-2, #greet-3, #greet-4 {
+    flex: 1 1 50%;
+}
+
+.greet-img {
+    width: 98%;
+    padding: 1%;
+    margin: 0;
+    border-radius: 20px;
+}
+
+.greet-p {
+    width: 90%;
+    padding: 5%;
+    margin: 0;
+    font-size: 50px;
+    color: rgba(7, 74, 7, 0.8);
+    font-family: 'hand-writing';
+}
+
+.search-info {
+    width: 100%;
+    text-align: center;
+}
+
+#search-input {
+    border: 1px solid rgba(30, 20, 20, 0.785);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 80px;
+    margin: auto;
+}
+
+.icon {
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #333;
+}
+
+.info {
+    text-align: center;
+    background-color: whitesmoke ;
+}
+
+.slide-img {
+    width: 80%;
+    border-radius: 30px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+width: 75%;
+position: relative;
+margin: auto;
+text-align: center;
+font-size: 30px;
+}
+
+/* Hide the images by default */
+.mySlides{
+display: none;
+text-align: center;
+width: 100%;
+}
+
+/* Next & previous buttons */
+.prev,.next{
+cursor: pointer;
+position: absolute; 
+top: 60%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: rgb(0, 0, 0);
+font-weight: bold;
+font-size: 18px;
+transition:.6sease;
+}
+
+/* Position the "next button" to the right */
+.next{
+right: 0;
+border-radius:0 6px 6px 0;
+}
+
+/* Position the "previous button" to the left */
+.prev{
+left: 0;
+border-radius:6px 0 0 6px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,.next:hover{
+background-color:rgba(63, 55, 55, 0.3);
+}
+
+/* Caption text */
+.caption{
+color:#f2f2f2;
+font-size:20px;
+padding:8px 12px;
+position:absolute;
+bottom:8px;
+width:100%;
+text-align:center;
+}
+
+/* The dots/bullets/indicators */
+.dot{
+cursor:pointer;
+height:15px;
+width:15px;
+margin:0 2px;
+background-color:#bbb;border-radius:50%;display:inline-block;transition: background-color 0.6s ease;
+}
+
+.active,.dothover{background-color:#717171;}
+
+/* Fading animation */
+.fade{
+-webkit-animation-name:fade;-webkit-animation-duration:1.5s;animation-name:fade;animation-duration:1.5s;}
+
+@-webkit-keyframesfade{from{opacity.4}to{opacity1}}
+
+@keyframesfade{from{opacity.4}to{opacity1}}
+
+.more {
+    padding: 15px 0;
+}
+
+.more a {
+    text-decoration: none;
+    color: black;
+}
+
+#info-head {
+    padding: 30px 0;
+}
+
+.products {
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.products-img {
+    width: 90%;
+    border-radius: 10%;
+}
+
+#products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    background-color: whitesmoke;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+  
+.footer-content {
+    display: flex;
+}
+  
+.about-us,
+.feedback-form {
+    flex-basis: calc(50% - 10px);
+    margin: 5px;
+}
+  
+.feedback-form label,
+.feedback-form input {
+    display: block;
+}
+  
+  .social-media {
+    text-align: center;
+}
+  
+.social-media a {
+    color: #fff;
+    margin: 0 5px;
+}
+  
+.copy-right {
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+}
+  
+.form-row label {
+    flex-basis: calc(50% - 10px);
+    margin: 5px;
+}
+  
+#my-map {
+    display: none;
+    width: 20%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.show-gg-map {
+    text-align: center;
+}
+  
+@font-face {
+    font-family: 'hand-writing';
+    src: url('Cookie-Regular.ttf') format('truetype');
+}
+
+.infomation {
+    padding: 15px 80px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthy garden</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="menu-bar">
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="image/Earthy Garden logo.png" alt="logo" id="web-logo">
+                    </a>
+                </li>
+                <li><a href="#">INFOMATION</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Technique</a></li>
+                            <li><a href="#">Tips</a></li>
+                            <li><a href="#">Tools</a></li>
+                            <li><a href="#">Soil</a></li>
+                            <li><a href="#">Pesticides</a></li>
+                            <li><a href="#">Seeds</a></li>
+                            <li><a href="#">Pots</a></li>
+                            <li><a href="#">Miniature Toys</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Pebbles</a></li>
+                        </ul>
+                    </div>
+                </li> 
+                <li><a href="#"> PRODUCT </a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">.....</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#us">ABOUT US</a>
+                </li>
+                <li>
+                    <input class="search-info" type="text" id="search-input" placeholder="search">
+                </li>
+                <li>
+                    <button id="shopping-cart"><i class="fas fa-shopping-cart icon"></i></button>
+                </li>
+                <li>
+                    <button id="user"><i class="fa-solid fa-user icon"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="greeting">
+        <div id="greet-1">
+            <p class="greet-p">Your Gardening <br> Journey Starts Here <br> At Earthy Garden</p>
+        </div>
+        <div id="greet-2">
+            <img src="/image/greet-1.jpg" alt="" class="greet-img">
+        </div>
+        <div id="greet-3">
+            <img src="/image/greet-2.jpg" alt="" class="greet-img">
+        </div>
+        <div id="greet-4">
+            <img src="/image/greet-3.jpg" alt="" class="greet-img">
+        </div>
+    </div>
+    <div class="infomation">
+        <h1>CHOOSING A LOCATION FOR YOUR GARDEN</h1>
+        <p>
+            Whether you're starting a new garden or extending an existing one, give careful consideration to where to site it. 
+            The right location gives your crops the best chance of success. When choosing a site, note the following environmental conditions:
+        </p>
+        <strong>Sun</strong> <br>
+        <p>
+            Pick the right site. Most vegetables need at least 6 hours of sunlight a day, although some crops, such as broccoli, lettuce, spinach, and other greens will grow well in less sunny spots.
+        </p>
+        <p>
+            In general, the more sunlight they receive, the greater the harvest and the better the taste.
+        </p>
+        
+    </div>
+    <footer>
+        <div class="footer-content">
+          <div class="about-us">
+            <h2 id="us">About Us</h2>
+            <p>We are a group of students who created this website as part of our project. Our goal is to share our passion for gardening and provide useful information and products to help others discover the joys of gardening. We hope you find our website helpful and informative, and we welcome your feedback and suggestions.</p>
+          </div>
+          <div class="feedback-form">
+            <h2>Feedback</h2>
+            <form action="submit-feedback" method="POST">
+                <div class="form-row">
+                  <label for="first-name">First Name:</label>
+                  <input type="text" id="first-name" name="first-name">
+                  <label for="last-name">Last Name:</label>
+                  <input type="text" id="last-name" name="last-name">
+                </div>
+                <div class="form-row">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email">
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone">
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+        <div class="social-media">
+          <p>You can find us on:</p>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="show-gg-map">
+            <button id="show-map">Or find us here!</button>
+            <iframe id="my-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0964842999224!2d105.77972177395297!3d21.028825087778905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4cd376479b%3A0xbc2e0bb9db373ed2!2zOGEgVMO0biBUaOG6pXQgVGh1eeG6v3QsIE3hu7kgxJDDrG5oLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1688618231459!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="copy-right">
+          © 2023 Earthy Garden. All rights reserved.
+        </div>
+      </footer>
+    <script src="js/search.js"></script>
+    <script src="js/show-map.js"></script>
+    <script src="https://kit.fontawesome.com/e63aaab90b.js" crossorigin="anonymous"></script>
+</body>
+</html>
