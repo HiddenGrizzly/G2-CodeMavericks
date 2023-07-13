@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="product.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="section">
+       
+    <div class="navbar">
+        <img src="images/Earthy Garden logo.png" alt="" class="imgsize">    
+        <div class="menubar">
+         <a href=""><i class="fa-solid fa-user"></i></a>
+          <a href="indexx.html">Home</a>
+          <a href="product.html">Product</a>
+          <button id="btm1">Contact</button>
+          <button id="btm">About Us</button>
+
+          <div class="SearchBar">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" >
+            <ul id="myUL" class="filterList">
+                <li><a href="">Shovel</a></li>
+                <li><a href="">Water Bucket</a></li>
+    
+                <li><a href="">Shears</a></li>
+                <li><a href="">Seed</a></li>
+    
+                <li><a href="">Soil</a></li>
+    
+            </ul>
+    
+        </div>
+
+        </div>
+         
+        <button id="open_cart_btn">
+            <img src="images/cart-shopping-solid.svg" alt="" style="width: 30px;">
+        </button>
+
+        <div class="backdrop"></div>
+
+
+   <div id="sidecart" class="sidecart">
+
+
+      <div class="cart_content">
+
+
+         <div class="cart_header">
+            <img src="images/cart-shopping-solid.svg" alt="" style="width: 30px;">
+            <div class="header-title">
+               <h2>Your Cart</h2>
+            </div>
+            <span id="close_btn" class="close_btn">&times;</span>
+         </div>
+
+         <div class="cart_items"></div>
+
+         <div class="cart_actions">
+         <div class="subtotal">
+            <p>SUBTOTAL:</p>
+            <p>$<span id="subtotal_price">0</span></p>
+         </div>
+         <button>Checkout</button>
+      </div>
+      </div>
+      </div>
+   </div>
+          
+
+
+
+
+        
+    </div>
+    
+
+
+
+
+    <div id="section2">
+        
+        <div class="container">
+
+            <h3 class="title">products </h3>
+         
+            <div class="products-container">
+
+                  <div class="product" data-name="p-1">
+                  <img src="images/garden Shovel.jpg" alt="">
+                  <h3>Garden Shovel</h3>
+                  <p class="price">$19.99</p>
+                  <p>Some text about the jeans..</p>
+                  <p><a href="cart.html"><button>Go To Product</button></a></p>  
+                </div>
+
+               
+         
+               <div class="product" data-name="p-2">
+                  <img src="images/Water Pot.jpg" alt=""    >
+                  <h3>Garden Water Bucket</h3>
+                  <p class="price">$19.99</p>
+                  <p>Some text about the jeans..</p>
+                  <p><a href="cart.html"><button>Go To Product</button></a></p>  
+               </div>
+         
+               <div class="product" data-name="p-3">
+                  <img src="images/Garden Shears.jpg" alt="">
+                  <h3>Garden Shears</h3>
+                  <p class="price">$19.99</p>
+                  <p>Some text about the jeans..</p>
+                  <p><a href="cart.html"><button>Go To Product</button></a></p>  
+                 </div>
+         
+               <div class="product" data-name="p-4">
+                  <img src="images/Organic seed premium.webp" alt="">
+                  
+                  <h3 class="ProductName">Espoma Organic Seed Starter Premium Potting Soil Mix</h3>
+                  <p class="price">$19.99</p>
+                  <p>Some text about the jeans..</p>
+                  <p><a href="cart.html"><button>Go To Product</button></a></p>  
+               </div>
+         
+               <div class="product" data-name="p-5">
+                  <img src="images/Organic Seed.jpg" alt="">
+                  <h3>Back to the Roots 3-in-1 Seed Starting Mix</h3>
+                  <p class="price">$19.99</p>
+                  <p>Some text about the jeans..</p>
+                  <p><a href="cart.html"><button>Go To Product</button></a></p>  
+               </div>
+         
+               <div class="product" data-name="p-6">
+                  <img src="images/Organic Garden Soil.jpg" alt="">
+                  <h3>Espoma Organic Garden Soil</h3>
+                  <p class="price">$19.99</p>
+                  <p>Some text about the jeans..</p>
+                  <p><a href="cart.html"><button>Go To Product</button></a></p>  
+               </div>
+
+               <div class="product" data-name="p-6">
+                <img src="images/Organic Garden Soil.jpg" alt="">
+                <h3>Espoma Organic Garden Soil</h3>
+                <p class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><a href="cart.html"><button>Go To Product</button></a></p>  
+             </div>
+
+             <div class="product" data-name="p-6">
+                <img src="images/Organic Garden Soil.jpg" alt="">
+                <h3>Espoma Organic Garden Soil</h3>
+                <p class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><a href="cart.html"><button>Go To Product</button></a></p>  
+             </div>
+
+             <div class="product" data-name="p-5">
+                <img src="images/Organic Seed.jpg" alt="">
+                <h3>Back to the Roots 3-in-1 Seed Starting Mix</h3>
+                <p class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><a href="cart.html"><button>Go To Product</button></a></p>  
+             </div>
+       
+             <div class="product" data-name="p-6">
+                <img src="images/Organic Garden Soil.jpg" alt="">
+                <h3>Espoma Organic Garden Soil</h3>
+                <p class="price">$19.99</p>
+                <p>Some text about the jeans..</p>
+                <p><a href="cart.html"><button>Go To Product</button></a></p>  
+             </div>
+
+             <div class="product" data-name="p-6">
+              <img src="images/Organic Garden Soil.jpg" alt="">
+              <h3>Espoma Organic Garden Soil</h3>
+              <p class="price">$19.99</p>
+              <p>Some text about the jeans..</p>
+              <p><a href="cart.html"><button>Go To Product</button></a></p>  
+           </div>
+
+           <div class="product" data-name="p-6">
+              <img src="images/Organic Garden Soil.jpg" alt="">
+              <h3>Espoma Organic Garden Soil</h3>
+              <p class="price">$19.99</p>
+              <p>Some text about the jeans..</p>
+              <p><a href="cart.html"><button>Go To Product</button></a></p>  
+           </div>
+
+           <div class="product" data-name="p-5">
+            <img src="images/Organic Seed.jpg" alt="">
+            <h3>Back to the Roots 3-in-1 Seed Starting Mix</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the jeans..</p>
+            <p><a href="cart.html"><button>Go To Product</button></a></p>  
+         </div>
+   
+         <div class="product" data-name="p-6">
+            <img src="images/Organic Garden Soil.jpg" alt="">
+            <h3>Espoma Organic Garden Soil</h3>
+            <p class="price">$19.99</p>
+            <p>Some text about the jeans..</p>
+            <p><a href="cart.html"><button>Go To Product</button></a></p>  
+         </div>
+
+         <div class="product" data-name="p-6">
+          <img src="images/Organic Garden Soil.jpg" alt="">
+          <h3>Espoma Organic Garden Soil</h3>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans..</p>
+          <p><a href="cart.html"><button>Go To Product</button></a></p>  
+       </div>
+
+       <div class="product" data-name="p-6">
+          <img src="images/Organic Garden Soil.jpg" alt="">
+          <h3>Espoma Organic Garden Soil</h3>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans..</p>
+          <p><a href="cart.html"><button>Go To Product</button></a></p>  
+       </div>
+         
+
+       <ul class="pageSwitch">
+            <li><a href="" class="prev"> Prev</a></li>
+            <li class="pageNumber active"><a href="">1</a></li>
+            <li class="pageNumber"><a href="">2</a></li>
+            <li class="pageNumber"><a href="">3</a></li>
+            <li class="pageNumber"><a href="">4</a></li>
+            <li class="pageNumber"><a href="">5</a></li>
+            <li class="pageNumber"><a href="">6</a></li>
+            <li><a href="" class="next">Next</a></li>
+       </ul>
+            </div>         
+         </div>
+         
+    </div>
+   <footer>
+    <div class="footer-content">
+        <h3>About Us</h3>
+        <p>We are a group of students who created this website as part of our project. Our goal is to share our passion for gardening and provide useful information and products to help others discover the joys of gardening. We hope you find our website helpful and informative, and we welcome your feedback and suggestions.</p>
+        <p>Contact Us: EearthyGarden@gmail.com</p>
+        <ul class="socials">
+            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            <li><a href=""><i class="fab fa-youtube"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2023 Earthy Garden. All rights reserved.</p>
+    </div>
+   </footer>
+    <script src="product.js"></script>
+    <script src="cart.js"></script>
+
+    
+</body>
+</html>
