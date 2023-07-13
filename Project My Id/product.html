@@ -14,35 +14,74 @@
     <div class="navbar">
         <img src="images/Earthy Garden logo.png" alt="" class="imgsize">    
         <div class="menubar">
+         <a href=""><i class="fa-solid fa-user"></i></a>
           <a href="indexx.html">Home</a>
           <a href="product.html">Product</a>
           <button id="btm1">Contact</button>
           <button id="btm">About Us</button>
-          <div class="Cart">  
-       
-        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-</div>
+
+          <div class="SearchBar">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" >
+            <ul id="myUL" class="filterList">
+                <li><a href="">Shovel</a></li>
+                <li><a href="">Water Bucket</a></li>
+    
+                <li><a href="">Shears</a></li>
+                <li><a href="">Seed</a></li>
+    
+                <li><a href="">Soil</a></li>
+    
+            </ul>
+    
+        </div>
+
+        </div>
+         
+        <button id="open_cart_btn">
+            <img src="images/cart-shopping-solid.svg" alt="" style="width: 30px;">
+        </button>
+
+        <div class="backdrop"></div>
+
+
+   <div id="sidecart" class="sidecart">
+
+
+      <div class="cart_content">
+
+
+         <div class="cart_header">
+            <img src="images/cart-shopping-solid.svg" alt="" style="width: 30px;">
+            <div class="header-title">
+               <h2>Your Cart</h2>
+            </div>
+            <span id="close_btn" class="close_btn">&times;</span>
+         </div>
+
+         <div class="cart_items"></div>
+
+         <div class="cart_actions">
+         <div class="subtotal">
+            <p>SUBTOTAL:</p>
+            <p>$<span id="subtotal_price">0</span></p>
+         </div>
+         <button>Checkout</button>
+      </div>
+      </div>
+      </div>
+   </div>
+          
+
+
+
 
         
     </div>
-    <div class="SearchBar">
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" >
-        <ul id="myUL" class="filterList">
-            <li><a href="">Shovel</a></li>
-            <li><a href="">Water Bucket</a></li>
-
-            <li><a href="">Shears</a></li>
-            <li><a href="">Seed</a></li>
-
-            <li><a href="">Soil</a></li>
-
-        </ul>
-
-    </div>
-</div>
+    
 
 
-</div>
+
+
     <div id="section2">
         
         <div class="container">
@@ -201,7 +240,7 @@
     <div class="footer-content">
         <h3>About Us</h3>
         <p>We are a group of students who created this website as part of our project. Our goal is to share our passion for gardening and provide useful information and products to help others discover the joys of gardening. We hope you find our website helpful and informative, and we welcome your feedback and suggestions.</p>
-        <p>Contact Us: 123123123@gmail.com</p>
+        <p>Contact Us: EearthyGarden@gmail.com</p>
         <ul class="socials">
             <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
             <li><a href=""><i class="fab fa-instagram"></i></a></li>
@@ -214,6 +253,7 @@
     </div>
    </footer>
     <script src="product.js"></script>
+    <script src="cart.js"></script>
 
     
 </body>

@@ -48,11 +48,132 @@ body {
     color: white;
   }
   
-  
+  #open_cart_btn {
+    position: fixed;
+    top: 18px;
+    right: 40px;
+    border: none;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 
-.Cart {
-    float: right;
-    margin
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+    opacity: 0;
+    transition: opacity .5s ease;
+  }
+
+  .backdrop.show {
+    display: block;
+    opacity: ;
+  }
+
+ .sidecart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 350px;
+  background-color: #fff;
+  box-shadow: -10px 0 15px lightgrey;
+  z-index: 2;
+  transform: translateX(110%);
+  transition: transform .5s ease-in-out;
+ }
+
+ .sidecart.open {
+  transform: translateX(0);
+ }
+ 
+.cart_content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart_header {
+  padding: 1rem;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart_header .close_btn {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.cart_header .close_btn:hover {
+  transform: scale(1.1);
+}
+
+.cart_items {
+  flex: 1;
+  overflow-x: hidden;
+}
+
+.cart_actions {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid lightgrey;
+  box-shadow: 0 -5px 10px lightgrey;
+}
+
+.cart_actions .subtotal {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.cart_actions button {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+.user {
+  position: absolute;
+  right: 30px;
 }
 
 .navbar input[type=text] {
@@ -69,6 +190,7 @@ body {
 .SearchBar {
     position: absolute;
     width: 300px; /* Adjust the width as needed */
+    top: 70px;
   }
   
   #myUL.filterList {
@@ -92,6 +214,7 @@ body {
     padding: 6px;
     margin-bottom: 5px;
     cursor: pointer;
+  
   }
   
   #myUL.filterList li:hover {
@@ -304,13 +427,15 @@ footer {
   }
   
   .pageSwitch {
-    position: relative;
+    position: absolute;
     background: #fff;
     display: flex;
     padding: 10px 20px;
     border-radius: 50px;
     box-shadow: 0 5px 15px rgba(0,0 ,0 ,0.2 );
     text-align: center;
+    top: 2000px;
+    left: 810px;
     
   }
 .pageSwitch li {
