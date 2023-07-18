@@ -230,7 +230,7 @@ button:hover {
     text-align: center;
 }
 #section2 {
-    height: 2050px;
+    height: 1900px;
     background: whitesmoke;
     display: inline-block;
     width: 100%;
@@ -425,45 +425,37 @@ footer {
   h3 {
     height: 50px;
   }
-  
-  .pageSwitch {
-    position: absolute;
-    background: #fff;
-    display: flex;
-    padding: 10px 20px;
-    border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0,0 ,0 ,0.2 );
-    text-align: center;
-    top: 2000px;
-    left: 810px;
-    
-  }
-.pageSwitch li {
-    list-style: none;
-    line-height: 50px;
-    margin: 0 5px;
-}
-.pageSwitch li .pageNumber {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-.pageSwitch li a {
-    display: block;
-    text-decoration: none;
-    color: #777;
-    font-weight: 600;
-    border-radius: 50%;
-}
-.pageSwitch li.pageNumber:hover a.active {
-    background: #333;
-    color: #fff;
-}
-.pageSwitch li:first-child {
-    margin-right: 30px;
-    font-weight: 700;
-    font-size: 20px;
+
+
+.nxtprvbutton {
+  left: 48%;
+  position: absolute;
+  bottom: -110%;
 }
 
+.nxtprvbutton a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.nxtprvbutton. a:hover {
+  background-color: whitesmoke;
+  color: white;
   
+}
+
+.previous {
+  background-color: black;
+  color: white;
+}
+
+.next {
+  background-color: black;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+  left: 50%;
+}
