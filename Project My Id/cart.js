@@ -24,3 +24,5 @@ function closeCart() {
      backdrop.style.display = "none"
     }, 500);
 }
+
+
