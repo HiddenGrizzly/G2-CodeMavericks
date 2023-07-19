@@ -12,17 +12,18 @@ body {
 .menu-bar {
     display: inline-flex;
     justify-content: center;
-    background: #444;
+    background: #111;
     width: 100%;
-    height: 80px;
-    font-size: 35px;
+    height: 90px;
+    font-size: 40px;
 }
 
 #web-logo {
-    width: 70px;
-    height: 70px;
-    margin: -10px auto;
+    width: 65px;
+    height: 65px;
+    margin: -5px auto;
     border-radius: 50%;
+    
 }
 
 .menu-bar ul {
@@ -41,7 +42,7 @@ body {
 .menu-bar ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .sub-menu {
@@ -96,18 +97,7 @@ body {
     font-family: 'hand-writing';
 }
 
-.search-info {
-    width: 100%;
-    text-align: center;
-}
 
-#search-input {
-    border: 1px solid rgba(30, 20, 20, 0.785);
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px 80px;
-    margin: auto;
-}
 
 .icon {
     padding: 10px;
@@ -214,6 +204,7 @@ background-color:#bbb;border-radius:50%;display:inline-block;transition: backgro
 }
 
 #info-head {
+
     padding: 30px 0;
 }
 
@@ -224,9 +215,19 @@ background-color:#bbb;border-radius:50%;display:inline-block;transition: backgro
 }
 
 .products-img {
-    width: 90%;
-    border-radius: 10%;
+    width: 80%;
+    border-radius: 9%;
+   
 }
+
+
+#products1-grid {
+    
+    width: 30%;
+    background-color:  #ffffff;
+    margin-bottom:0px ;
+}
+
 
 #products-grid {
     display: grid;
@@ -234,19 +235,38 @@ background-color:#bbb;border-radius:50%;display:inline-block;transition: backgro
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 20px;
     background-color: whitesmoke;
+    margin-bottom:25px ;
 }
-
 footer {
-    background-color: #333;
+    height: auto;
+    background: #111;
+    width: 98.9vw;
+    text-align: center;
+    font-family: Open Sans;
+    padding-bottom: 40px;
     color: #fff;
-    padding: 20px;
 }
-  
 .footer-content {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
 }
   
-.about-us,
+
 .feedback-form {
     flex-basis: calc(50% - 10px);
     margin: 5px;
@@ -255,6 +275,7 @@ footer {
 .feedback-form label,
 .feedback-form input {
     display: block;
+    transition: none;
 }
   
   .social-media {
@@ -291,10 +312,212 @@ footer {
 }
   
 @font-face {
+    
     font-family: 'hand-writing';
     src: url('Cookie-Regular.ttf') format('truetype');
 }
 
-.infomation {
-    padding: 15px 80px;
+
+.product{
+    
+    width: 100%;
+    border: 60px initial #b1afaf;
+    border-radius: 20px;
+    box-shadow:  0 0 16px 0  #797979;
 }
+.heading{
+    
+    font-size: 25px;
+}
+
+/* test*/
+#product-container {
+    width: 100%;    
+    display: inline-flex;
+    flex-direction: row;
+   
+}
+
+#product-image {
+
+    width: 30%;
+    text-align: center;
+    
+}
+
+
+
+#product-text {
+    position: absolute;
+    left: 23%;
+    text-align: left;
+    width: 40%;
+    
+}
+#products-head{
+   
+    text-decoration: underline;
+    margin: 60px 0 70px;
+}
+
+
+
+
+
+.product {
+    width: 320px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px #666666;
+    text-align: center;
+  }
+
+ 
+  .product img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+  }
+
+  .product img:hover {
+    transform:  scale(1.1);  
+  }
+
+  .product h3 {
+    
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(19, 17, 17);
+    margin: 10px;
+  }
+
+  .product p {
+    font-size: 16px;
+    color: #100c0c;
+    margin: 10px;
+  }
+
+  .product .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    margin: 10px;
+  }
+
+  .product button {
+    border-radius:10px ;
+    display: block;
+    width: 80%;
+    margin: 10px 30px;
+    padding: 10px;
+    background-color: rgba(48, 48, 48, 0.505);
+    color: rgb(241, 236, 236);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 #333;
+  }
+
+  .product button:hover {
+    transform: scale(1.1);
+    background-color: rgba(48, 48, 48, 1);
+  }
+
+
+  .related-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .related-products h2 {
+    
+    font-size: 24px;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .product button:hover {
+    transform: scale(1.1);
+  }
+
+#videos{
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+
+
+   
+  .box {
+    height:55px;
+    background-color: rgb(47, 47, 47);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  input {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 0px;
+    transition: 0.8s ease;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+  }
+   
+  input::placeholder {
+    color: rgb(253, 242, 227);
+  }
+   
+  a {
+    color: whitesmoke;
+    text-align: center;
+    width: 60px;
+    font-size: 18px;
+  }
+   
+  .box:hover input {
+    width: 200px;
+    margin: 0 20px;
+    border-bottom: 2px solid rgb(18, 18, 18);
+  }
+   
+  input:focus {
+    width: 200px;
+    margin: 0 20px;
+    border-bottom: 2px solid rgb(54, 54, 54);
+  }
+
+
+.table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+  }
+
+
+
+.bill{
+    position: relative;
+    left: 100px;
+    top: 20%;
+    background-color: #ffffff;     
+}
+
+
+.ductbill{
+    text-align: center;
+}
+
+
+
+

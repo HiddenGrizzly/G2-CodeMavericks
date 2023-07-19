@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Earthy garden</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Project My Id/product copy.css">
+    <link rel="shortcut icon" href="image/Earthy Garden logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="menu-bar">
@@ -41,7 +44,12 @@
                 <li><a href="#us">ABOUT US</a>
                 </li>
                 <li>
-                    <input class="search-info" type="text" id="search-input" placeholder="search">
+                    <div>
+                        <div class="box">
+                          <input type="text" placeholder="Search here">
+                          <a><i class="fas fa-search-location"></i></a>
+                        </div>
+                      </div>
                 </li>
                 <li>
                     <button id="shopping-cart"><i class="fas fa-shopping-cart icon"></i></button>
@@ -88,63 +96,40 @@
         </div>
         <!-- More info -->
         <div class="more">
-            <a href="#">Show more</a>
+            <a href="#" >Show more</a>
         </div>
     </div>
     <div class="products">
-        <p class="heading">Our Products</p>
+        <p class="heading" >Our Products</p>
         <div id="products-grid">
             <!-- Include products.js -->
             <script src="js/products.js"></script>
             <!-- Generate product grid -->
             <script src="js/index-show-products.js"></script>
         </div>
-        <div class="more">
-            <a href="#">Show more</a>
-        </div>
+       
     </div>
+
     <footer>
         <div class="footer-content">
-          <div class="about-us">
-            <h2 id="us">About Us</h2>
+            <h3>About Us</h3>
             <p>We are a group of students who created this website as part of our project. Our goal is to share our passion for gardening and provide useful information and products to help others discover the joys of gardening. We hope you find our website helpful and informative, and we welcome your feedback and suggestions.</p>
-          </div>
-          <div class="feedback-form">
-            <h2>Feedback</h2>
-            <form action="submit-feedback" method="POST">
-                <div class="form-row">
-                  <label for="first-name">First Name:</label>
-                  <input type="text" id="first-name" name="first-name">
-                  <label for="last-name">Last Name:</label>
-                  <input type="text" id="last-name" name="last-name">
-                </div>
-                <div class="form-row">
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email">
-                  <label for="phone">Phone Number:</label>
-                  <input type="tel" id="phone" name="phone">
-                </div>
-                <input type="submit" value="Submit">
-            </form>
-          </div>
+            <p>Contact Us: EearthyGarden@gmail.com</p>
+            <ul class="socials">
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </ul>
         </div>
-        <div class="social-media">
-          <p>You can find us on:</p>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="footer-bottom">
+            <p>© 2023 Earthy Garden. All rights reserved.</p>
         </div>
-        <div class="show-gg-map">
-            <button id="show-map">Or find us here!</button>
-            <iframe id="my-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0964842999224!2d105.77972177395297!3d21.028825087778905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4cd376479b%3A0xbc2e0bb9db373ed2!2zOGEgVMO0biBUaOG6pXQgVGh1eeG6v3QsIE3hu7kgxJDDrG5oLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1688618231459!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="copy-right">
-          © 2023 Earthy Garden. All rights reserved.
-        </div>
-      </footer>
-    <script src="js/search.js"></script>
-    <script src="js/show-map.js"></script>
-    <script src="https://kit.fontawesome.com/e63aaab90b.js" crossorigin="anonymous"></script>
+       </footer>
+        <script src="/js/index-show-info.js"></script>
+        <script src="/js/index-show-products.js"></script>
+        <script src="/js/infomation.js"></script>
+        <script src="/js/products.js"></script>
+        <script src="https://kit.fontawesome.com/e63aaab90b.js" crossorigin="anonymous"></script>
 </body>
 </html>
